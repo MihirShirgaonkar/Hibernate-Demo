@@ -19,8 +19,10 @@ public class FetchDemoFirst {
 		Session session = sf.openSession();
 		
 		Address ad = session.get(Address.class, 1);		
-		
+		Address ad1 = session.load(Address.class, 2);		
+
 		System.out.println(ad);
+		System.out.println(ad1);
 		
 		
 		session.close();
